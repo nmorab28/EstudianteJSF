@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+<meta charset="ISO-8859-1"/>
+<title>Insert title here</title>
+</h:head>
+<h:body>
+
+<p:dataTable id="products" var="estudiante" value="#{estudianteBean.estudiantesRegistrados}" emptyMessage="No hay estudiantes">
+            <f:facet name="Header">
+                Estudiantes Registrados
+            </f:facet>
+
+            <p:column headerText="Nombre">
+                <h:outputText value="#{estudiante.nombre}" />
+            </p:column>
+            <p:column headerText="Cedula">
+                <h:outputText value="#{estudiante.cedula}" />
+            </p:column>
+            <p:column headerText="Programa">
+                <h:outputText value="#{estudiante.programa}" />
+            </p:column>
+            <p:column headerText="Fecha de Ingreso">
+                <h:outputText value="#{estudiante.fechaIngreso}" />
+            </p:column>
+            <p:column headerText="Correo">
+                <h:outputText value="#{estudiante.correo}" />
+            </p:column>
+        </p:dataTable>
+
+</h:body>
+</html>
